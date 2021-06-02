@@ -1,0 +1,123 @@
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 8px #1e2127;
+  border: 4px solid #1e2127;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.card-wrapper.light {
+  background-color: #fff;
+}
+
+.card-wrapper.dark {
+  background-color: rgb(47, 52, 61);
+}
+
+.card-wrapper.dark:hover {
+  background-color: #353a44;
+}
+
+.card-wrapper.light:hover {
+  box-shadow: 6px 6px 9px #1e2127;
+}
+
+.card-wrapper .author {
+  overflow-wrap: break-word;
+  font-size: 1.5rem;
+  width: 25%;
+  font-weight: 600;
+}
+
+.card-wrapper .author > .title {
+  margin: 10px auto;
+  font-family: monospace;
+}
+
+.card-wrapper.dark .author > .title {
+  color: #61dafb;
+}
+
+.card-wrapper.light .author > .title {
+  color: #998fc7;
+}
+
+.card-wrapper .author img {
+  width: 120px;
+  height: 120px;
+}
+
+.card-wrapper .repo {
+  width: 75%;
+}
+
+.card-wrapper .no-data {
+  font-style: italic;
+  color: rgb(156, 156, 156);
+}
+
+.card-wrapper .stats {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-wrapper .stats div > svg {
+  margin: auto 10px;
+}
+
+.card-wrapper .stats div {
+  margin: 0 5px;
+}
+
+.card-wrapper .stats > div {
+  margin: auto 5px 0;
+}
+
+@media only screen and (max-width: 850px) {
+  .card-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    padding: 20px 5px;
+  }
+
+  .card-wrapper section {
+    box-sizing: border-box;
+  }
+
+  .card-wrapper .author {
+    width: 75%;
+  }
+
+  .card-wrapper .author,
+  .card-wrapper .repo {
+    margin: auto;
+    overflow-wrap: break-word;
+  }
+}
+
+.filter-choise ul {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.filter-choise ul li {
+  font-style: italic;
+  list-style-type: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.filter-choise ul li:after {
+  content: '|';
+  margin: 10px;
+}
+
+.filter-choise ul li:last-child:after {
+  content: '';
+}

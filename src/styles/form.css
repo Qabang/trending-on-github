@@ -1,0 +1,88 @@
+.filter {
+  display: flex;
+  justify-content: center;
+}
+
+.filter select {
+  margin-top: 5px;
+  padding: 10px;
+  max-width: 90%;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.filter label {
+  text-align: left;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter input {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  border: 0;
+  padding: 9px 15px 7.55px 40px;
+  background: transparent;
+  cursor: pointer;
+}
+.filter .submit-wrap.dark {
+  background-color: rgb(96, 217, 251);
+}
+
+.filter .submit-wrap.light {
+  background-color: #998fc7;
+}
+
+.filter .submit-wrap {
+  position: relative;
+  z-index: 0;
+  margin: 38px 0;
+  height: max-content;
+  border-radius: 5px;
+  cursor: pointer;
+  background-image: url(.././images/search.svg);
+  background-size: 16.5%;
+  background-repeat: no-repeat;
+  background-position: 12px 10px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: rgb(133, 133, 133);
+  border-image: initial;
+  cursor: pointer;
+}
+
+.filter .submit-wrap.dark:hover {
+  background-color: #77defa;
+}
+
+.filter .submit-wrap.light:hover {
+  background-color: #ab9fdf;
+}
+
+@media only screen and (max-width: 850px) {
+  .filter {
+    flex-direction: column;
+  }
+
+  .filter input {
+    min-width: calc(90% - 15px);
+    padding: 10px 15px;
+  }
+
+  .filter .submit-wrap {
+    min-width: calc(90% - 17px);
+    background-image: unset;
+    margin: 20px auto 30px;
+  }
+
+  .filter select {
+    margin: auto;
+    margin-top: 10px;
+    min-width: 90%;
+  }
+
+  .filter label {
+    text-align: center;
+  }
+}
