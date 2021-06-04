@@ -29,15 +29,15 @@ function Footer() {
           </p>
         </section>
         <Formik
+          // Disable the validation on change to only run validation on submit.
           validateOnChange={false}
           initialValues={{ email: '' }}
-          onSubmit={(values, { resetForm }) => {
-            resetForm({ email: '' })
-            alert('Din email har registrerats! 🎉')
-          }}
+          // Validate needs to be before the onSubmit call otherwise it triggers
+          // after a successfull submit.
           validate={(values) => {
             const errors = {}
 
+            // Check if empty. Else check that it is a valid email adress.
             if (values.email.trim() === '') {
               errors.email = "The email field can't be empty"
             } else if (
@@ -48,15 +48,13 @@ function Footer() {
 
             return errors
           }}
+          // Submit form and empty the values.
+          onSubmit={(values, { resetForm }) => {
+            resetForm({ email: '' })
+            alert('Din email ' + values.email + ' har registrerats! 🎉')
+          }}
         >
-          {({
-            errors,
-            handleBlur,
-            handleChange,
-            handleSubmit,
-            values,
-            resetForm,
-          }) => (
+          {({ errors, handleBlur, handleChange, handleSubmit, values }) => (
             <form className="newsletter" onSubmit={handleSubmit}>
               <div className="h2">Sign up for our newsletter</div>
               <div className="input-wrapper">
