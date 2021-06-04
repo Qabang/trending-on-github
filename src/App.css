@@ -1,12 +1,14 @@
 @font-face {
   font-family: 'Oxygen-Bold';
   src: local('Oxygen-Bold'), url(./fonts/Oxygen-Bold.ttf) format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Cantarell-Regular';
   src: local('Cantarell-Regular'),
     url(./fonts/Cantarell-Regular.ttf) format('truetype');
+  font-display: swap;
 }
 
 html {

@@ -60,7 +60,12 @@ function ThemeButton() {
   return (
     <Div>
       <MoonFill className="slider-icon" />
-      <Wrapper active={active} className="slider-wrapper" onClick={handleSlide}>
+      <Wrapper
+        active={active}
+        className="slider-wrapper"
+        aria-label="Toggle theme"
+        onClick={handleSlide}
+      >
         <Slider active={active} onClick={handleSlide} />
       </Wrapper>
       <SunFill className="slider-icon" />
